@@ -1,0 +1,14 @@
+:host {
+  & .dashboard-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  & .chart {
+    width: 60rem;
+    height: 400px;
+  }
+}
