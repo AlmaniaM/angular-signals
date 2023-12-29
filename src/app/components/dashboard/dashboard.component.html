@@ -1,14 +1,7 @@
 <!-- Dashboard Component HTML -->
 <div class="dashboard-container">
-  <!-- Bar Chart -->
-  <div echarts [options]="barChartOptions" [theme]="'dark'" class="chart"></div>
-
-  <!-- Pie Chart -->
-  <div echarts [options]="pieChartOptions" [theme]="'dark'" class="chart"></div>
-
-  <!-- Line Chart -->
-  <div echarts [options]="lineChartOptions" [theme]="'dark'" class="chart"></div>
-
-  <!-- Gradient Stacked Area Chart -->
-  <div echarts [options]="gradientStackedArea" [theme]="'dark'" class="chart"></div>
+  <bar-chart/>
+  <pie-chart/>
+  <line-chart/>
+  <gradient-stacked-chart/>
 </div>

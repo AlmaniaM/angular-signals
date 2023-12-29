@@ -4,11 +4,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+
+    & .chart-container {
+      width: 60rem;
+      height: 30rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: #110c29;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+    }
   }
 
   & .chart {
-    width: 60rem;
-    height: 400px;
+    width: 100%;
+    height: calc(100% - 2rem);
   }
 }
