@@ -18,6 +18,11 @@
     }
   }
 
+  & mat-divider {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
   & .chart {
     width: 100%;
     height: calc(100% - 2rem);

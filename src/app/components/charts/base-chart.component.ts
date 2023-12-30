@@ -16,8 +16,8 @@ export class BaseChartComponent {
 
   protected randomizeChartOptions(): void {}
 
-  protected deepCopyOptions(): EChartsOption {
-    return JSON.parse(JSON.stringify(this.options()));
+  protected deepCopyOptions(options?: EChartsOption): EChartsOption {
+    return JSON.parse(JSON.stringify(options || this.options()));
   }
 
   protected getRandomNumber(max: number) {

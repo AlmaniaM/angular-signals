@@ -5,6 +5,9 @@ import { BarChartComponent } from '../charts/bar-chart/bar-chart.component';
 import { PieChartComponent } from '../charts/pie-chart/pie-chart.component';
 import { LineChartComponent } from '../charts/line-chart/line-chart.component';
 import { GradientStackedChartComponent } from '../charts/gradient-stacked-chart/gradient-stacked-chart.component';
+import { BarRaceChartComponent } from '../charts/bar-race-chart/bar-race-chart.component';
+import { LoadingChartComponent } from '../charts/loading-chart/loading-chart.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,6 +19,9 @@ import { GradientStackedChartComponent } from '../charts/gradient-stacked-chart/
     PieChartComponent,
     LineChartComponent,
     GradientStackedChartComponent,
+    BarRaceChartComponent,
+    LoadingChartComponent,
+    MatDividerModule,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'

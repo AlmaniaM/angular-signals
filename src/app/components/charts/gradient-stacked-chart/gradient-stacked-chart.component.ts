@@ -43,4 +43,24 @@ export class GradientStackedChartComponent extends BaseChartComponent implements
   ngOnInit(): void {
     // this._chartOptionsSubject.next(createGradientStackedArea());
   }
+
+  protected override randomizeChartOptions(): void {
+    const options = createGradientStackedArea();
+    const series = options.series as any[];
+    const currentValue = this.getRandomNumber(100);
+
+    const randomizeData = (sData: number, index: number) => {
+      if (this.getRandomNumber(1000) > 500) {
+        return index % 2 === 0 ? sData * currentValue : sData;
+      }
+
+      return sData * currentValue;
+    };
+
+    series.forEach(s => {
+      s.data = (s.data as number[]).map((d, index) => randomizeData(d, index));
+    });
+
+    this._chartOptionsSubject.next(options);
+  }
 }
