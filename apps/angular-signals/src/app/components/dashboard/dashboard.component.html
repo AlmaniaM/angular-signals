@@ -1,0 +1,61 @@
+<!-- Dashboard Component HTML -->
+<div class="dashboard-container">
+  <bar-chart #barChart />
+
+  <mat-divider #divider1 />
+
+  @defer (on viewport(divider2)) {
+  <pie-chart />
+  } @loading (minimum 1s) {
+  <loading-chart />
+  } @placeholder {
+  <loading-chart />
+  }
+
+  <mat-divider #divider2 />
+
+  @defer (on interaction(barChart)) {
+  <line-chart />
+  } @placeholder {
+  <loading-chart />
+  } @error {
+  <p>Failed to load the chart.</p>
+  }
+
+  <mat-divider #divider3 />
+
+  @defer (on viewport(divider4)) {
+  <gradient-stacked-chart />
+  } @placeholder {
+  <loading-chart />
+  }
+
+  <mat-divider #divider4 />
+
+  <!-- Defer fetching dependencies for chart until the Show Chart button is clicked -->
+  @defer (on interaction(showBarRaceChartBtn)) {
+  <bar-race-chart />
+  } @placeholder {
+  <div
+    style="
+      height: 34rem;
+      width: 60rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <button
+      #showBarRaceChartBtn
+      mat-raised-button
+      color="primary"
+      style="width: 10rem"
+    >
+      Show Chart
+    </button>
+  </div>
+  }
+
+  <mat-divider #divider5 />
+</div>
